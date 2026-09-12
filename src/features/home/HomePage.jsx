@@ -42,7 +42,11 @@ export default function HomePage() {
               <section>
                 <h2 className="text-h2 text-text mb-space-1-5">كمّل من هنا</h2>
                 <Link
-                  to={`/courses/${inProgress.course_slug}`}
+                  to={
+                    inProgress.last_lesson_slug
+                      ? `/courses/${inProgress.course_slug}/lessons/${inProgress.last_lesson_slug}`
+                      : `/courses/${inProgress.course_slug}`
+                  }
                   className="flex items-center gap-space-1-5 bg-surface rounded shadow-sm border border-border p-space-2-5 hover:shadow-md transition-shadow duration-base"
                 >
                   <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary-soft shrink-0">
