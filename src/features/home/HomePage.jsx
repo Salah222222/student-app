@@ -5,6 +5,7 @@ import { SkeletonCard, SkeletonLine } from "../../components/SkeletonCard";
 import EmptyState from "../../components/EmptyState";
 import ErrorState from "../../components/ErrorState";
 import RedeemCodeForm from "./RedeemCodeForm";
+import HomepageMarketing from "./HomepageMarketing";
 import { useAuth } from "../../context/AuthContext";
 import { useMyCourses } from "../../lib/useMyCourses";
 
@@ -66,6 +67,8 @@ export default function HomePage() {
         )}
 
         <RedeemCodeForm onRedeemed={reload} />
+
+        <HomepageMarketing />
       </div>
     </Layout>
   );
