@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.salahelmasry.studentapp",
+        "sha256_cert_fingerprints": ["D3:F7:14:5B:25:44:1F:10:DB:36:24:07:B7:25:C9:F1:D9:A2:47:2E:BF:30:F0:35:4A:64:15:A0:15:8C:6E:9F"]
+      }
+    }]
