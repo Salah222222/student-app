@@ -99,6 +99,12 @@ export const api = {
   // a logged-out visitor browsing the catalog (optional-auth endpoint,
   // same pattern as courseDetail()/lessonDetail() below).
   allCourses: () => request("/courses"),
+
+  // Homepage marketing content — same public sections a logged-out
+  // website visitor sees on "/" (hero, banners, latest courses, feature
+  // cards, reviews, FAQ). No per-user data in the response, so no token
+  // is sent at all.
+  homepage: () => request("/homepage", { auth: false }),
 };
 
 export { API_BASE_URL };
