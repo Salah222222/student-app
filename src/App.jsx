@@ -10,6 +10,7 @@ import HomePage from "./features/home/HomePage";
 import MyCoursesPage from "./features/home/MyCoursesPage";
 import AllCoursesPage from "./features/courses/AllCoursesPage";
 import CourseDetailPage from "./features/courses/CourseDetailPage";
+import LandingPageViewer from "./features/courses/LandingPageViewer";
 import LessonPlayerPage from "./features/lesson/LessonPlayerPage";
 import { recordSessionStart } from "./lib/engagement";
 
@@ -42,6 +43,7 @@ export default function App() {
                 }
               />
               <Route path="/courses" element={<AllCoursesPage />} />
+              <Route path="/courses/:slug/details" element={<LandingPageViewer />} />
               <Route path="/courses/:slug" element={<CourseDetailPage />} />
               <Route
                 path="/courses/:courseSlug/lessons/:lessonSlug"
