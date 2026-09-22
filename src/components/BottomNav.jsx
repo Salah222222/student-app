@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { House, BookOpen, GraduationCap, SignIn, SignOut } from "@phosphor-icons/react";
+import { House, BookOpen, GraduationCap, ChatCircleDots, SignIn, SignOut } from "@phosphor-icons/react";
 import { useAuth } from "../context/AuthContext";
 
 const linkBase =
@@ -46,6 +46,7 @@ export default function BottomNav() {
       <TabLink to="/" end label="الرئيسية" Icon={House} />
       <TabLink to="/courses" label="كل الكورسات" Icon={BookOpen} />
       <TabLink to="/my-courses" label="كورساتي" Icon={GraduationCap} />
+      <TabLink to="/chat" label="الرسائل" Icon={ChatCircleDots} />
       <button
         type="button"
         onClick={handleAuthTap}
