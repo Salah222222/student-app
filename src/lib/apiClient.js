@@ -109,6 +109,8 @@ export const api = {
 
   pollMessages: (afterId) =>
     request(`/messages/poll?after_id=${encodeURIComponent(afterId)}`),
+
+  unreadCount: () => request("/messages/unread-count"),
 };
 
 export { API_BASE_URL };
