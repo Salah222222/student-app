@@ -100,6 +100,8 @@ export const api = {
   // same pattern as courseDetail()/lessonDetail() below).
   allCourses: () => request("/courses"),
 
+  homepage: () => request("/homepage", { auth: false }),
+
   messages: () => request("/messages"),
 
   sendMessage: (bodyText) =>
