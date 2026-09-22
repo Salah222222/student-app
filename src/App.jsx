@@ -12,6 +12,7 @@ import AllCoursesPage from "./features/courses/AllCoursesPage";
 import CourseDetailPage from "./features/courses/CourseDetailPage";
 import LandingPageViewer from "./features/courses/LandingPageViewer";
 import LessonPlayerPage from "./features/lesson/LessonPlayerPage";
+import ChatPage from "./features/chat/ChatPage";
 import { recordSessionStart } from "./lib/engagement";
 
 export default function App() {
@@ -48,6 +49,14 @@ export default function App() {
               <Route
                 path="/courses/:courseSlug/lessons/:lessonSlug"
                 element={<LessonPlayerPage />}
+              />
+              <Route
+                path="/chat"
+                element={
+                  <ProtectedRoute>
+                    <ChatPage />
+                  </ProtectedRoute>
+                }
               />
             </Routes>
             <InstallSheet />
